@@ -9,7 +9,7 @@ dotenv.config();
 
 export default function Home() {
   const account = useAccount();
-  const provider = new ethers.AlchemyProvider("optimism", process.env.NEXT_PUBLIC_ALCHEMY_API_KEY);
+  const provider = new ethers.AlchemyProvider("optimism", process.env.ALCHEMY_API_KEY);
   const contract = new Contract("0x764594F8e9757edE877B75716f8077162B251460", abi, provider);
     async function readData() {
       const collateral = await contract.getUserAccountData(account.address!);
