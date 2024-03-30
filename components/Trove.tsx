@@ -72,7 +72,7 @@ const Trove = ({address, chain, collateral, debt}: ITroveProps): React.JSX.Eleme
                 </div>
               </div>
             </div>
-            <div className="text-[#9b9b9b] text-xs">Your Collateral Ratio is {Number(collateral)/Number(debt)*100}%</div>
+            <div className="text-[#9b9b9b] text-xs">Your Collateral Ratio will be {Number(collateral)/Number(debt)*100}%</div>
           </div>
           <div className="max-w-[568px] w-[100vw] bg-[#1b1b1b] flex flex-col space-y-[3px] items-start justify-center p-4 rounded-[12px] border-2 border-[#202020] focus-within:border-[#404040]">
             <span className="text-xs text-[#9b9b9b]">Tap-In Threshold</span>
@@ -84,7 +84,7 @@ const Trove = ({address, chain, collateral, debt}: ITroveProps): React.JSX.Eleme
                 className="w-1/2 h-10 text-3xl bg-inherit outline-none placeholder:text-[#5d5d5d]"                 
                 placeholder="0%" />
             </div>
-            <div className="text-[#9b9b9b] text-xs">Your tap-in threshold is {percent.rcr_percent}%.</div>
+            <div className="text-[#9b9b9b] text-xs">Your tap-in threshold will be {percent.rcr_percent}%.</div>
           </div>
           <div className="max-w-[568px] w-[100vw] bg-[#1b1b1b] flex flex-col space-y-[3px] items-start justify-center p-4 rounded-[12px] border-2 border-[#202020] focus-within:border-[#404040]">
             <span className="text-xs text-[#9b9b9b]">Tap-In Gain</span>
@@ -101,7 +101,7 @@ const Trove = ({address, chain, collateral, debt}: ITroveProps): React.JSX.Eleme
                 placeholder="0%" />
               <div className="text-[#0066ff] text-xs">{percent.r_percent}</div>
             </div>
-            <div className="text-[#9b9b9b] text-xs">Your tap-in gain is {percent.r_percent}%.</div>
+            <div className="text-[#9b9b9b] text-xs">Your tap-in gain will be {percent.r_percent}%.</div>
           </div>
         </div>
           <div className="max-w-[568px] w-[100vw] bg-[#1b1b1b] flex flex-col space-y-[3px] items-start justify-center p-4 rounded-[12px] border-2 border-[#202020] focus-within:border-[#404040]">
@@ -115,7 +115,7 @@ const Trove = ({address, chain, collateral, debt}: ITroveProps): React.JSX.Eleme
                 placeholder="0%" />
               <button onClick={getBuyBackMaxAmount} className="w-1/2 h-full p-2 flex gap-2 items-center justify-center bg-[rgba(0,102,255,0.1)] text-base text-[#0066FF] font-medium rounded-[8px] outline-none">Min</button>
             </div>
-            <div className="text-[#9b9b9b] text-xs">Your Buyback Percent is {percent.buyback_percent}%.</div>
+            <div className="text-[#9b9b9b] text-xs">Your Buyback Percent will be {percent.buyback_percent}%.</div>
           </div>
         <button type="submit" className="bg-[#311C31] text-[#FC72FF] w-full h-14 text-lg font-medium rounded-[10px]">Submit</button>
       </form>
