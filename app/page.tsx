@@ -2,17 +2,18 @@
 import Trove from "@/components/Trove";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
-import { abi } from "../abi/abi";
-import { ethers, Contract } from "ethers";
 import dotenv from "dotenv";
 dotenv.config();
+import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 
 export default function Home() {
+  const abi = require("../abi/abi.json");
   const account = useAccount();
-  const provider = new ethers.AlchemyProvider("optimism", process.env.ALCHEMY_API_KEY);
-  const contract = new Contract("0x764594F8e9757edE877B75716f8077162B251460", abi, provider);
+  const alchemyWeb3 = createAlchemyWeb3(`wss://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`);
+  const contract = new alchemyWeb3.eth.Contract(abi, "0x764594F8e9757edE877B75716f8077162B251460");
+
     async function readData() {
-      const collateral = await contract.getUserAccountData(account.address!);
+      const collateral = await contract.methods.getUserAccountData(account.address!).call();
       console.log(collateral);
     };
     readData();

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@alch/alchemy-web3": "^1.4.7",
     "@rainbow-me/rainbowkit": "^2.0.4",
     "@tanstack/react-query": "^5.28.9",
     "dotenv": "^16.4.5",
