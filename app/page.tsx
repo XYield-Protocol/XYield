@@ -10,7 +10,7 @@ export default function Home() {
   const abi = require("../abi/abi.json");
   const account = useAccount();
   const alchemyWeb3 = createAlchemyWeb3("wss://opt-mainnet.g.alchemy.com/v2/rpewUH-zQ_Erace_FTmnciTki1-Uct_S");
-  const contract = new alchemyWeb3.eth.Contract(abi, "0x764594F8e9757edE877B75716f8077162B251460");
+  const contract = new alchemyWeb3.eth.Contract(abi, "0x794a61358D6845594F94dc1DB02A252b5b4814aD");
 
     async function readData() {
       const collateral = await contract.methods.getUserAccountData(account.address!).call();
