@@ -72,7 +72,7 @@ const Trove = ({address, chain, collateral, debt}: ITroveProps): React.JSX.Eleme
                 </div>
               </div>
             </div>
-            <div className="text-[#9b9b9b] text-xs">You are Collateral Ratio is {}</div>
+            <div className="text-[#9b9b9b] text-xs">You are Collateral Ratio is {Number(collateral)/Number(debt)}</div>
           </div>
           <div className="max-w-[568px] w-[100vw] bg-[#1b1b1b] flex flex-col space-y-[3px] items-start justify-center p-4 rounded-[12px] border-2 border-[#202020] focus-within:border-[#404040]">
             <span className="text-xs text-[#9b9b9b]">Redemption CR</span>
