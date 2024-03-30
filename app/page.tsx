@@ -36,7 +36,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center gap-[20px] p-4">
       <ConnectButton showBalance />
     
-			<Trove address={account.address!} chain={account.chain?.name!} collateral={amount.collateral} debt={amount.debt} />
+			<Trove address={account.address!} chain={account.chain?.name!} collateral={(Number(amount.collateral)*1e-8).toString()} debt={(Number(amount.debt)*1e-8).toString()} />
     </main>
   );
 }
