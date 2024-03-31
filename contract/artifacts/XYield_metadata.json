@@ -1,0 +1,196 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_priceFeed",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_usdtToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_swapRouter",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_aaveGateway",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "aaveGateway",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getEthUsdPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "poolFee",
+				"outputs": [
+					{
+						"internalType": "uint24",
+						"name": "",
+						"type": "uint24"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "s_userProfile",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "collateralTapInPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collateralBuyBackPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collateralToLiquidate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_collateralTapInPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_collateralBuyBackPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_collateralToLiquidate",
+						"type": "uint256"
+					}
+				],
+				"name": "setUserProfile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "swapRouter",
+				"outputs": [
+					{
+						"internalType": "contract ISwapRouter",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "usdtToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XYield_flattened.sol": "XYield"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XYield_flattened.sol": {
+			"keccak256": "0x54ba0d90bb0d79e2f648936df24c29c037b8864fbcd99d0e1a4fcb2e7930cee7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://16a51fb65de4f390903ffa3390b6cadab9ec23a1d4f15757055caaf54853ff78",
+				"dweb:/ipfs/QmWxw3SS8NvAcg3LafmbynGYMfLqCDt4PbR5Sj6tMvMHoo"
+			]
+		}
+	},
+	"version": 1
+}
